@@ -41,14 +41,13 @@ function makeBurger(el) {
 
 function toggleClass(el, toggle) {
     var elClass = typeof(el.className) === 'undefined' ? "" : el.className;
-    var toggleLength = toggle.length;
     var toggleIndex = elClass.indexOf(toggle);
     
     if (toggleIndex === -1) {
         elClass += " " + toggle;
     } else {
         toggle = " " + toggle;
-        elClass = elClass.replace(new RegExp(toggle), '');
+        elClass = elClass.replace(toggle, '');
     }
     el.className = elClass;
 }
