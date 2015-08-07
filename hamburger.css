@@ -3,14 +3,16 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    top: 0;
     -webkit-transition: transform 0.5s ease-in;
     -moz-transition: transform 0.5s ease-in;
     -ms-transition: transform 0.5s ease-in;
     -o-transition: transform 0.5s ease-in;
-    transition: transform 0.5s ease-in;
+    transition: all 0.5s ease-in;
 }
 .burger.active {
     transform: rotate(270deg);
+    top: -8px;
 }
 .burger div {
     background-color: black;
@@ -80,5 +82,18 @@
 }
 .burger-wrapper.wrapper-center {
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
     transform: translateX(-50%);
+}
+.burger-wrapper.wrapper-mid-center {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
